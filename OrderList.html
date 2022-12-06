@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PO List - E-logistics </title>
+  <title>Order List - E-logistics </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -29,21 +29,31 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
+
+.card2 {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+    border-width: 0;
+    transition: all .2s;
+}
+
+.card2 {
+    position: relative;
+    /* display: flex; */
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color:white; 
+    opacity: 70%;
+    background-clip: border-box;
+    border: 1px solid rgba(26,54,126,0.125);
+    border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+.card2-body {
+    flex: 1 1 auto;
+}
+   
     </style>
 
   <!-- =======================================================
@@ -305,29 +315,13 @@
        </a>
        <ul id="tables-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
          <li>
-           <a href="NewOrder.html">
-             <i class="bi bi-circle"></i><span>New Order</span>
-           </a>
-         </li>
-         <li>
            <a href="OrderList.html">
              <i class="bi bi-circle"></i><span>Order List</span>
            </a>
          </li>
        </ul>
      </li>
-     <li class="nav-item">
-      <a class="nav-link collapsed"  href="MyContractList.html">
-        <i class="bi bi-archive"></i></i>
-        <span>Contract List</span>
-      </a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link collapsed"  href="ListOrderApproval.html">
-        <i class="bi bi-people"></i>
-        <span>Approval List</span>
-      </a>
-    </li>
+
 
 
 
@@ -361,7 +355,7 @@
       
   
             <!-- Sales Card -->
-            <div class="col-xxl-2 col-md-6">
+            <div class="col-xxl-3 col-md-6">
               <div class="card info-card sales-card">
 
                
@@ -384,7 +378,7 @@
             </div><!-- End Sales Card -->
 
             <!-- Customers Card -->
-            <div class="col-xxl-2 col-md-6">
+            <div class="col-xxl-3 col-md-6">
 
               <div class="card info-card customers-card">
 
@@ -410,7 +404,7 @@
 
             </div><!-- End Customers Card -->
                <!-- Sales Card -->
-               <div class="col-xxl-2 col-md-6">
+               <div class="col-xxl-3 col-md-6">
                 <div class="card info-card sales-card">
   
   
@@ -431,66 +425,16 @@
   
                 </div>
               </div><!-- End Sales Card -->
-  
+
               <!-- Customers Card -->
-              <div class="col-xxl-2 col-md-6">
+              <div class="col-xxl-3 col-md-6">
   
                 <div class="card info-card customers-card">
   
                 
   
                   <div class="card-body">
-                    <h5 class="card-title">Rejected</h5>
-  
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                        
-                        <i class="bi bi-cart-x"></i>
-                      </div>
-                      <div class="ps-3">
-                        <h6>12</h6>
-                        <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> -->
-  
-                      </div>
-                    </div>
-  
-                  </div>
-                </div>
-  
-              </div><!-- End Customers Card -->
-      
-              <div class="col-xxl-2 col-md-6">
-                <div class="card info-card sales-card">
-  
-                 
-  
-                  <div class="card-body">
-                    <h5 class="card-title">Delivered</h5>
-  
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                        <i class="bi bi-cart"></i>
-                      </div>
-                      <div class="ps-3">
-                        <h6>145</h6>
-                        <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-  
-                      </div>
-                    </div>
-                  </div>
-  
-                </div>
-              </div><!-- End Sales Card -->
-  
-              <!-- Customers Card -->
-              <div class="col-xxl-2 col-md-6">
-  
-                <div class="card info-card customers-card">
-  
-                
-  
-                  <div class="card-body">
-                    <h5 class="card-title">Cancelled</h5>
+                    <h5 class="card-title">Completed</h5>
   
                     <div class="d-flex align-items-center">
                       <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -520,157 +464,198 @@
     </section>
     <section class="">
       <div class="row">
+        <div class="col-md-6"> 
+          <h3>Order List</h3>
+        </div>
+        <div class="col-md-6">  
+            <div class="search-bar" style="float: right;">
+          <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button> &nbsp;&nbsp;&nbsp;
+            <a type="submit" class="btn btn-primary" style="margin-bottom: 5px;"><i class="bi bi-arrow-down-square-fill"></i> Download </a></div>
+          </form>
+        </div>
+       
+      </div>
+      </div>
+      
+      <div class="row">
 
        
      
           <!-- End Revenue Card -->
             <!-- Reports -->
             <div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Order List</h5>
-                  <div class="search-bar">
-                    <form class="search-form d-flex align-items-center" method="POST" action="#">
-                      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                      <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-                    </form>
-                  </div>
-                  <br>
-                  <!-- Table with stripped rows -->
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Order ID</th>
-                        <th scope="col">Order Date</th>
-                        <th scope="col">Service Details</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total Price (RM</th>
-                        <th scope="col">Order Status</th>
-                        <th scope="col">Complation Date</th>
-                        <th scope="col"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td><a href="orderdetails.html">5679</a></td>
-                        <td>30/10/22</td>
-                        <td>
-                          Miri
-                          <br>Shipping Agency
-                          <br>Vessel Clearance Inward
-                          <br>AHT (Anchorage)
-                        </td>
-                        <td>1</td>
-                        <td>2,500.00</td>
-                        <td>Completed</td>
-                        <td>10/11/2022</td>
-                        <td>
-                          <button type="submit" class="btn btn-primary" >
-                            <div class="icon">
-                              <i class="bi bi-cart4"></i>
-                            </div>Reorder</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>5678</td>
-                        <td>30/10/22</td>
-                        <td>
-                          Miri
-                          <br>Shipping Agency
-                          <br>Vessel Clearance Inward
-                          <br>AHT (Anchorage)
-                        </td>
-                        <td>1</td>
-                        <td>2,500.00</td>
-                        <td>Completed</td>
-                        <td>10/11/2022</td>
-                        <td>
-                          <button type="submit" class="btn btn-primary" >
-                            <div class="icon">
-                              <i class="bi bi-cart4"></i>
-                            </div>Reorder</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>5678</td>
-                        <td>30/10/22</td>
-                        <td>
-                          Miri
-                          <br>Shipping Agency
-                          <br>Vessel Clearance Inward
-                          <br>AHT (Anchorage)
-                        </td>
-                        <td>1</td>
-                        <td>2,500.00</td>
-                        <td>Completed</td>
-                        <td>10/11/2022</td>
-                        <td>
-                          <button type="submit" class="btn btn-primary" >
-                            <div class="icon">
-                              <i class="bi bi-cart4"></i>
-                            </div>Reorder</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>5678</td>
-                        <td>30/10/22</td>
-                        <td>
-                          Miri
-                          <br>Shipping Agency
-                          <br>Vessel Clearance Inward
-                          <br>AHT (Anchorage)
-                        </td>
-                        <td>1</td>
-                        <td>2,500.00</td>
-                        <td>Completed</td>
-                        <td>10/11/2022</td>
-                        <td>
-                          <button type="submit" class="btn btn-primary" >
-                            <div class="icon">
-                              <i class="bi bi-cart4"></i>
-                            </div>Reorder</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>5678</td>
-                        <td>30/10/22</td>
-                        <td>
-                          Miri
-                          <br>Shipping Agency
-                          <br>Vessel Clearance Inward
-                          <br>AHT (Anchorage)
-                        </td>
-                        <td>1</td>
-                        <td>2,500.00</td>
-                        <td>Completed</td>
-                        <td>10/11/2022</td>
-                        <td>
-                          <button type="submit" class="btn btn-primary" >
-                            <div class="icon">
-                              <i class="bi bi-cart4"></i>
-                            </div>Reorder</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <!-- End Table with stripped rows -->
-    
+              <div class="card2">
+                <div class="card2-body">
+                 
+         <table class="table table-borderless" style="margin-top: 10px;">
+                <thead>
+
+                </thead>
+                <tbody>
+                  <tr >
+                    <th rowspan="3" style="border-right: 1px solid #dddddd;vertical-align : middle;text-align: center;">1</td>
+                    <th scope="col" style="border-bottom: 1px solid #dddddd;">#2022-12-1564A</th>
+                    <th colspan="2" style="text-align: right;border-bottom: 1px solid #dddddd;"><span style="padding: 6px; background-color:green;color: white; border-radius: 10px;">Complete </span>| 6-12-2022</th>
+                    <th rowspan="3" style="border-left: 1px solid #dddddd;vertical-align : middle;text-align: center;"><a href ="orderdetails.html"><i class="bi bi-pencil"></i> Edit</a></th>
+                   
+                  </tr>
+                  <tr>
+                    
+                    <td><span style="color: grey;font-size: smaller;">Location </span>
+                      <br> <span style="color: blue;">Miri </span><br>
+                      <span style="color: grey;font-size: smaller;">Service </span>
+                      <br> <span style="color: blue;">Shipping Agency </span><br>
+                      <span style="color: grey;font-size: smaller;">Product  </span>
+                      <br> <span style="color: red;">Vessel Clearance >  Inward > AHT (Anchorage) </span><br>
+                
+                     <td >
+                      <span style="color: grey;font-size: smaller;">Price </span>
+                      <br> <span style="color: blue;">RM 5,500</span><br>
+                      <span style="color: grey;font-size: smaller;">Quantity </span>
+                      <br> <span style="color: blue;">x1</span><br>
+                      </td>
+                    
+                    <!--  -->
+                  </tr>
+                  <tr >
+                    <td ><span style="color: grey;font-size: smaller;"> Target Completion Date</span>
+                      <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                      <br> </td>
+                    <td style="text-align: right;"><span style="color: grey;font-size: smaller;">Completion Date</span>
+                      <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                      <br> </td>
+                  </tr>
+                </tbody>
+              </table>
                 </div>
               </div>
     
-            </div><!-- End Reports -->
+            </div>
+            <!-- End Reports -->
+            <div class="col-12">
+              <div class="card2">
+                <div class="card2-body">
+                 
+         <table class="table table-borderless" style="margin-top: 10px;">
+                <thead>
+
+                </thead>
+                <tbody>
+                  <tr >
+                    <th rowspan="3" style="border-right: 1px solid #dddddd;vertical-align : middle;text-align: center;">2</td>
+                    <th scope="col" style="border-bottom: 1px solid #dddddd;">#2022-12-1564A</th>
+                    <th colspan="2" style="text-align: right;border-bottom: 1px solid #dddddd;"><span style="padding: 6px; background-color:yellow;border-radius: 10px;">Processing </span>| 6-12-2022</th>
+                    <th rowspan="3" style="border-left: 1px solid #dddddd;vertical-align : middle;text-align: center;"><a href ="#"><i class="bi bi-pencil"></i> Edit</a></th>
+                   
+                  </tr>
+                  <tr>
+                    
+                    <td><span style="color: grey;font-size: smaller;">Location </span>
+                      <br> <span style="color: blue;">Miri </span><br>
+                      <span style="color: grey;font-size: smaller;">Service </span>
+                      <br> <span style="color: blue;">Shipping Agency </span><br>
+                      <span style="color: grey;font-size: smaller;">Product  </span>
+                      <br> <span style="color: red;">Vessel Clearance >  Inward > AHT (Anchorage) </span><br>
+                
+                     <td >
+                      <span style="color: grey;font-size: smaller;">Price </span>
+                      <br> <span style="color: blue;">RM 5,500</span><br>
+                      <span style="color: grey;font-size: smaller;">Quantity </span>
+                      <br> <span style="color: blue;">x1</span><br>
+                      </td>
+                    
+                    <!--  -->
+                  </tr>
+                  <tr >
+                    <td ><span style="color: grey;font-size: smaller;"> Target Completion Date</span>
+                      <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                      <br> </td>
+                    <td style="text-align: right;"><span style="color: grey;font-size: smaller;">Completion Date</span>
+                      <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                      <br> </td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
+              </div>
+    
+            </div>
+
+            <div class="col-12">
+              <div class="card2">
+                <div class="card2-body">
+                 
+         <table class="table table-borderless" style="margin-top: 10px;">
+                <thead>
+
+                </thead>
+                <tbody>
+                  <tr >
+                    <th rowspan="3" style="border-right: 1px solid #dddddd;vertical-align : middle;text-align: center;">3</td>
+                    <th scope="col" style="border-bottom: 1px solid #dddddd;">#2022-12-1564A</th>
+                    <th colspan="2" style="text-align: right;border-bottom: 1px solid #dddddd;"><span style="padding: 6px; background-color:blue;color: white; border-radius: 10px;">New Order </span>| 6-12-2022</th>
+                    <th rowspan="3" style="border-left: 1px solid #dddddd;vertical-align : middle;text-align: center;"><a href ="#"><i class="bi bi-pencil"></i> Edit</a></th>
+                   
+                  </tr>
+                  <tr>
+                    
+                    <td><span style="color: grey;font-size: smaller;">Location </span>
+                      <br> <span style="color: blue;">Miri </span><br>
+                      <span style="color: grey;font-size: smaller;">Service </span>
+                      <br> <span style="color: blue;">Shipping Agency </span><br>
+                      <span style="color: grey;font-size: smaller;">Product  </span>
+                      <br> <span style="color: red;">Vessel Clearance >  Inward > AHT (Anchorage) </span><br>
+                
+                     <td >
+                      <span style="color: grey;font-size: smaller;">Price </span>
+                      <br> <span style="color: blue;">RM 5,500</span><br>
+                      <span style="color: grey;font-size: smaller;">Quantity </span>
+                      <br> <span style="color: blue;">x1</span><br>
+                      </td>
+                    
+                    <!--  -->
+                  </tr>
+                  <tr >
+                    <td ><span style="color: grey;font-size: smaller;"> Target Completion Date</span>
+                      <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                      <br> </td>
+                    <td style="text-align: right;"><span style="color: grey;font-size: smaller;">Completion Date</span>
+                      <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                      <br> </td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
+              </div>
+    
+            </div>
 
              
             </div>
 
 
       </div>
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+          
+    
+   
+   
     </section>
 
 
