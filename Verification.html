@@ -28,23 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-    </style>
+
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1
@@ -287,128 +271,45 @@
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
 
-     <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+     <li class="nav-item">
+       <a class="nav-link " href="index.html">
+         <i class="bi bi-grid"></i>
+         <span>Dashboard</span>
+       </a>
+     </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="lookupsetup.html">
-          <i class="bi bi-gear-wide-connected"></i>
-          <span>Lookup Setup</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav8" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Service Catalogue</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav8" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="servicecatalogue.html">
-              <i class="bi bi-circle"></i><span> Service Catalogue Form</span>
-            </a>
-          </li>
-          <li>
-            <a href="listService.html">
-              <i class="bi bi-circle"></i><span>Service Catalogue List</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav1" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-people"></i></i><span>Customer Profile</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="customer.html">
-              <i class="bi bi-circle"></i><span>Customer Profile Form</span>
-            </a>
-          </li>
-          <li>
-            <a href="ListCust.html">
-              <i class="bi bi-circle"></i><span>Customer List</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-arrows-angle-contract"></i><span>Contract </span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <ul id="tables" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="contract.html">
-              <i class="bi bi-circle"></i><span>Contract Form</span>
-            </a>
-          </li>
-          <li>
-            <a href="listCO.html">
-              <i class="bi bi-circle"></i><span>Contract List</span>
-            </a>
-          </li>
-        </ul>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav --> 
+     <li class="nav-item">
+       <a class="nav-link collapsed" data-bs-target="#tables-nav1" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-cart-check"></i><span>My Order</span><i class="bi bi-chevron-down ms-auto"></i>
+       </a>
+       <ul id="tables-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         <li>
+           <a href="OrderList.html">
+             <i class="bi bi-circle"></i><span>Order List</span>
+           </a>
+         </li>
+         <li>
+          <a href="approvallist.html">
+            <i class="bi bi-circle"></i><span>Order List Verification</span>
+          </a>
+        </li>
+       </ul>
+     </li>
 
-    
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav9" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-cart-plus"></i><span>Purchased Order</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav9" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="po.html">
-              <i class="bi bi-circle"></i><span> Purchased Order Form</span>
-            </a>
-          </li>
-          <li>
-            <a href="POlist.html">
-              <i class="bi bi-circle"></i><span>Purchased Order List</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav0" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bag-plus"></i><span> Order</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav0" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="order.html">
-              <i class="bi bi-circle"></i><span>Order Form</span>
-            </a>
-          </li>
-          <li>
-            <a href="OrderList.html">
-              <i class="bi bi-circle"></i><span>Order List</span>
-            </a>
-          </li>
-          <li>
-            <a href="approvallist.html">
-              <i class="bi bi-circle"></i><span>Approval List</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
 
-   
 
-    </ul>
+  
 
-  </aside><!-- End Sidebar-->
+   </ul>
+
+ </aside>
+  <!-- End Sidebar-->
 
   <main id="main" class="main">
 
@@ -434,7 +335,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Approval List</h5>
+                  <h5 class="card-title">Verification List</h5>
                   <div class="search-bar">
                     <form class="search-form d-flex align-items-center" method="POST" action="#">
                       <input type="text" name="query" placeholder="Search" title="Enter search keyword">
@@ -443,99 +344,92 @@
                   </div>
                   <br>
                   <!-- Table with stripped rows -->
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">PO Number</th>
-                        <th scope="col">Order ID</th>
-                        <th scope="col">Service Items</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Create Date</th>
-                        <th scope="col">Status</th>
+                  <section class="">
+                    <div class="row">
+                      <div class="col-md-6"> 
+                        <h3>Order List</h3>
+                      </div>
+                      <div class="col-md-6">  
+                          <div class="search-bar" style="float: right;">
+                        <form class="search-form d-flex align-items-center" method="POST" action="#">
+                          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                          <button type="submit" title="Search"><i class="bi bi-search"></i></button> &nbsp;&nbsp;&nbsp;
+                         
+                        </form>
+                      </div>
+                     
+                    </div>
+                    </div>
+                    
+                    <div class="row">
+              
+                     
+                   
+                        <!-- End Revenue Card -->
+                          <!-- Reports -->
+                        <div class="col-12">
+                          <table class="table table-borderless" style="margin-top: 10px;">
+                              <tbody>
+                                <tr >
+                                  <th rowspan="3" style="border-right: 1px solid #dddddd;vertical-align : middle;text-align: center;">1</td>
+                                  <th scope="col" style="border-bottom: 1px solid #dddddd;">#2022-12-1564A</th>
+                                  <th colspan="2" style="text-align: right;border-bottom: 1px solid #dddddd;"><span style="padding: 6px; background-color:green;color: white; border-radius: 10px;">Complete </span>| 6-12-2022</th>
+                                  <th rowspan="3" style="border-left: 1px solid #dddddd;vertical-align : middle;text-align: center;"><a href ="orderdetails.html"><input class="form-check-input" type="checkbox" id="gridCheck1"></a></th>
+                                 
+                                </tr>
+                                <tr>
+                                  <td><span style="color: grey;font-size: smaller;">Location </span>
+                                    <br> <span style="color: blue;">Miri </span><br>
+                                    <span style="color: grey;font-size: smaller;">Service </span>
+                                    <br> <span style="color: blue;">Shipping Agency </span><br>
+                                    <span style="color: grey;font-size: smaller;">Product  </span>
+                                    <br> <span style="color: red;">Vessel Clearance >  Inward > AHT (Anchorage) </span><br>
+                                   <td >
+                                    <span style="color: grey;font-size: smaller;">Price </span>
+                                    <br> <span style="color: blue;">RM 5,500</span><br>
+                                    <span style="color: grey;font-size: smaller;">Quantity </span>
+                                    <br> <span style="color: blue;">x1</span><br>
+                                    </td>
+                                </tr>
+                                <tr >
+                                  <td ><span style="color: grey;font-size: smaller;"> Target Completion Date</span>
+                                    <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                                    <br> </td>
+                                  <td style="text-align: right;"><span style="color: grey;font-size: smaller;">Completion Date</span>
+                                    <br> <span style="color: black; font-weight: bold;">2022-11-01 </span>
+                                    <br> </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+
+                      </div>
+              
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+              
                         
-                        <th scope="col">
-                          Action
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row">1</td>
-                        <td>ZZ</td>
-                        <td>12345</td>
-                        <td>7988</td>
-                        <td>Packing</td>
-                        <td>Miri</td>
-                        <td>29/01/2022</td>
-                        <td>Enable</td>
-                        <td><div class="text-center">
-                          <button type="submit" class="btn btn-primary"><a href="approval.html">EDIT</a></button>
-                        </div></td>
-                      </tr>
-                      <tr>
-                        <td scope="row">2</td>
-                        <td>ZZ</td>
-                        <td>45678</td>
-                        <td>7988</td>
-                        <td>Packing</td>
-                        <td>Miri</td>
-                        <td>29/01/2022</td>
-                        <td>Enable</td>
-                        <td>
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-primary">EDIT</button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">3</td>
-                        <td>ZZ</td>
-                        <td>9999</td>
-                        <td>7988</td>
-                        <td>Packing</td>
-                        <td>Miri</td>
-                        <td>29/01/2022</td>
-                        <td>Enable</td>
-                        <td>
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-primary">EDIT</button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">4</td>
-                        <td>ZZ</td>
-                        <td>67890</td>
-                        <td>7988</td>
-                        <td>Packing</td>
-                        <td>Miri</td>
-                        <td>29/01/2022</td>
-                        <td>Enable</td>
-                        <td>
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-primary">EDIT</button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">5</td>
-                        <td>ZZ</td>
-                        <td>0000</td>
-                        <td>7988</td>
-                        <td>Packing</td>
-                        <td>Miri</td>
-                        <td>29/01/2022</td>
-                        <td>Enable</td>
-                        <td>
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-primary">EDIT</button>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Approved</button>
+                  </div>
+                </div>
+                 
+                 
+                  </section>
+              
                   <!-- End Table with stripped rows -->
     
                 </div>
