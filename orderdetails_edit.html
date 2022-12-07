@@ -393,16 +393,17 @@ ul.timeline-3 > li:before {
                       <td>Requestor </td>
                 <td><b>: Dynamic Division Officer</b></td>
                     </tr>
+                    <tr>
+                      <td>Item </td>
+                      <td><b>: AHT (Wharf)</b></td>
+                      </tr>
                   </tbody>
                 </table>
               </div>
               <div class="col-md-6">
                 <table border="0" cellspacing="4" cellpadding="4">
                   <tbody>
-                    <tr>
-                    <td>Item </td>
-                    <td><b>: AHT (Wharf)</b></td>
-                    </tr>
+                   
                     <tr>
                       <td>Order Date </td>
                       <td><b>: 14/11/2022</b></td>
@@ -413,11 +414,30 @@ ul.timeline-3 > li:before {
                     </tr>
                     <tr>
                       <td>Order Status </td>
-                      <td><b>: Completed</b></td>
+                      <td>  <b>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected value="0">Completed</option>
+                            <option value="1">In Progress</option>
+                            <option value="2">New Order</option>
+                            <option value="3">Cancelled</option>
+                            <option value="4">Approved</option>
+                          </select>
+                        </b>
+                      </td>
                     </tr>
                     <tr>
                       <td>Quantity</td>
                       <td><b>:  1</b></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Remarks
+                      </td>
+                      <td>
+                        <div class="input-group">
+                          <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -482,7 +502,7 @@ ul.timeline-3 > li:before {
               <div class="card-body">
                 <table class="table ">
                   <thead>
-                    <tr>
+                   
                       <th > Document</th>
                       <th>File Name</th>
                 
